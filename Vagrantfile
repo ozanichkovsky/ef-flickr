@@ -49,6 +49,7 @@ Vagrant.configure("2") do |config|
   end
   config.vm.provision :shell, :path => "puphpet/shell/update-puppet.sh"
   config.vm.provision :shell, :path => "puphpet/shell/librarian-puppet-vagrant.sh"
+  config.vm.provision :shell, :path => "puphpet/shell/chmod-symfony.sh"
 
   config.vm.provision :puppet do |puppet|
     ssh_username = !data['ssh']['username'].nil? ? data['ssh']['username'] : "vagrant"
