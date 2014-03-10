@@ -1,0 +1,2 @@
+_ef_flickr:
+    resource: "@EFFlickrBundle/Resources/config/routing.yml"

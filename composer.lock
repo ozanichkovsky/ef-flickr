@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "386e91dd1a8ae75ec4e0fd584353caa8",
+    "hash": "8c9179482ae6d7e55f0a60d8a4cd31d3",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -938,7 +938,9 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
                 }
             ],
             "description": "The base bundle for the Symfony Distributions",
@@ -993,7 +995,9 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
                 }
             ],
             "description": "This bundle provides a way to configure your controllers with annotations",
@@ -1045,7 +1049,9 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
                 }
             ],
             "description": "This bundle generates code for you",
@@ -1086,7 +1092,9 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
                 },
                 {
                     "name": "Chris Corbyn"
@@ -1480,7 +1488,9 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
                 }
             ],
             "description": "Common additional features for Twig that do not directly belong in core",
@@ -1863,16 +1873,16 @@
         },
         {
             "name": "zendframework/zendservice-flickr",
-            "version": "2.0.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/ZendService_Flickr.git",
-                "reference": "deb21a240466ad86ab594a6ff2689c334b02298a"
+                "reference": "06f19976e442eb121807a7a0ecad41ada123b5f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/ZendService_Flickr/zipball/deb21a240466ad86ab594a6ff2689c334b02298a",
-                "reference": "deb21a240466ad86ab594a6ff2689c334b02298a",
+                "url": "https://api.github.com/repos/zendframework/ZendService_Flickr/zipball/06f19976e442eb121807a7a0ecad41ada123b5f2",
+                "reference": "06f19976e442eb121807a7a0ecad41ada123b5f2",
                 "shasum": ""
             },
             "require": {
@@ -1889,7 +1899,7 @@
             },
             "autoload": {
                 "psr-0": {
-                    "ZendService": "library/"
+                    "ZendService\\Flickr\\": "library/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1902,7 +1912,7 @@
                 "flickr",
                 "zf2"
             ],
-            "time": "2012-09-24 15:18:11"
+            "time": "2012-12-11 22:00:42"
         }
     ],
     "packages-dev": [
@@ -1912,9 +1922,9 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
+    "stability-flags": {
+        "zendframework/zendservice-flickr": 20
+    },
     "platform": {
         "php": ">=5.3.3"
     },
