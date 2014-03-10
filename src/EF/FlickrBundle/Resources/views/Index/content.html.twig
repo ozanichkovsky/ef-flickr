@@ -1,0 +1,10 @@
+{% for image in images %}
+    <div class="image">
+        <a href="{{ image.url }}" class="fancy"><img src="{{ image.thumbnailUrl }}"></a>
+        <div class="description">
+            <span{{ image.owner.name | escape('html_attr') }}><b>Author:</b> {{ image.owner.name | escape('html') }}</span>
+            <span title="{{ image.title | escape('html_attr') }}"><b>Title:</b> {{ image.title | escape('html') }}</span>
+        </div>
+    </div>
+{% endfor %}
+{% include "EFFlickrBundle:Index:pagination.html.twig" %}

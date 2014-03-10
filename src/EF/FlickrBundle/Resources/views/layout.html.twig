@@ -1,0 +1,45 @@
+{% extends "::base.html.twig" %}
+
+{% block stylesheets %}
+    <link rel="icon" sizes="16x16" href="{{ asset('favicon.ico') }}" />
+    <link rel="stylesheet" href="{{ asset('bundles/efflickr/css/main.css') }}" />
+    <link rel="stylesheet" href="{{ asset('bundles/efflickr/js/fancybox/jquery.fancybox.css') }}" type="text/css" media="screen" />
+{% endblock %}
+
+{% block head_javascripts %}
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="{{ asset('bundles/efflickr/js/fancybox/jquery.fancybox.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/efflickr/js/search.js') }}"></script>
+{% endblock %}
+
+{% block title 'EF - Flickr' %}
+
+{% block body %}
+    {% for flashMessage in app.session.flashbag.get('notice') %}
+        <div class="flash-message">
+            <em>Notice</em>: {{ flashMessage }}
+        </div>
+    {% endfor %}
+
+    {% block content_header %}
+        <ul id="menu">
+            {% block content_header_more %}
+                <li><a href="{{ path('_demo') }}">Demo Home</a></li>
+            {% endblock %}
+        </ul>
+
+        <div style="clear: both"></div>
+    {% endblock %}
+
+    <div class="block">
+        {% block content %}{% endblock %}
+    </div>
+
+    {% if code is defined %}
+        <h2>Code behind this page</h2>
+        <div class="block">
+            <div class="symfony-content">{{ code|raw }}</div>
+        </div>
+    {% endif %}
+{% endblock %}

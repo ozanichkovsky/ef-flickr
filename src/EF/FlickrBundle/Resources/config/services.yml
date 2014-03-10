@@ -1,0 +1,15 @@
+parameters:
+    ef_flickr.importer.class: EF\FlickrBundle\Service\Importer
+    ef_flickr.import.flickr.class: EF\FlickrBundle\Service\Flickr
+    ef_flickr.import.flickr.api_key: 5a3cba773e0de3a9504130db3a8b7798
+
+services:
+    ef_flickr.importer:
+        class: "%ef_flickr.importer.class%"
+
+    ef_flickr.import.flickr:
+        class: "%ef_flickr.import.flickr.class%"
+        arguments:
+            - "%ef_flickr.import.flickr.api_key%"
+        tags:
+            -  { name: ef_flickr.import, alias: flickr }

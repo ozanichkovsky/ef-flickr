@@ -1,0 +1,20 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: sasha
+ * Date: 10.03.14
+ * Time: 1:26
+ */
+
+namespace EF\FlickrBundle\Entity;
+
+
+class Owner
+{
+
+    private $id;
+
+    private $name;
+
+    private $photos;
+} 

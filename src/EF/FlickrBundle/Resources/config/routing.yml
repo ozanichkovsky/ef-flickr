@@ -1,0 +1,9 @@
+_index:
+    pattern:  /{page}
+    defaults: { _controller: EFFlickrBundle:Index:index, page: 1 }
+    requirements:
+        page:  \d+
+
+_search:
+    pattern: /search
+    defaults: { _controller: EFFlickrBundle:Index:search }

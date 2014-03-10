@@ -1,0 +1,23 @@
+.image {
+    display: inline-block;
+    margin: 10px;
+    height: 225px;
+    width: 240px;
+}
+
+.image span {
+    display: block;
+}
+
+.pagination {
+    text-align: center;
+}
+
+#SearchType {
+    display: inline-block;
+}
+
+#SearchType div {
+    display: inline-block;
+    margin-right: 10px;
+}

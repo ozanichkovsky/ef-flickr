@@ -1,0 +1,15 @@
+{% extends 'EFFlickrBundle::layout.html.twig' %}
+
+{% block title %}EF - Flickr{% endblock %}
+
+{% block body %}
+    <h1 class="title">EF - Flickr</h1>
+    <form action="{{ url('_search') }}" method="post" name="{{ form.vars.full_name }}" {{ form_enctype(form) }}>
+        {{ form_widget(form) }}
+        <button type="submit">Search</button>
+    </form>
+    <div class="content">
+        {% include "EFFlickrBundle:Index:content.html.twig" %}
+    </div>
+
+{% endblock %}

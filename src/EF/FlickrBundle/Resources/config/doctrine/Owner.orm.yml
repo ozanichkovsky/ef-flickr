@@ -1,0 +1,15 @@
+EF\FlickrBundle\Entity\Owner:
+    type: entity
+    table: owner
+    id:
+        id:
+            type: string
+            length: 15
+    fields:
+        name:
+            type: string
+            length: 255
+    oneToMany:
+        images:
+          targetEntity: Image
+          mappedBy: owner

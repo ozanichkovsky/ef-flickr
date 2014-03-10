@@ -1,0 +1,29 @@
+EF\FlickrBundle\Entity\Image:
+    type: entity
+    table: image
+    repositoryClass: EF\FlickrBundle\Entity\ImageRepository
+    id:
+        id:
+            type: string
+            length: 11
+    fields:
+        title:
+            type: string
+            length: 255
+        url:
+            type: string
+            length: 255
+        thumbnailUrl:
+            type: string
+            length: 255
+            column: thumbnail_url
+        width:
+            type: integer
+            length: 5
+        height:
+            type: integer
+            length: 5
+    manyToOne:
+        owner:
+            targetEntity: Owner
+            inversedBy: images
